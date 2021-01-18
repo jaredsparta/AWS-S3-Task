@@ -10,6 +10,8 @@ if __name__ == "__main__":
         print('Existing buckets:')
         for bucket in response['Buckets']:
             print(f'  {bucket["Name"]}')
-    except botocore.exceptions.ClientError as e:
+    except ClientError as e:
         print(e)
-        
+
+    return True
+
